@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-# This program counts the number of words in a given sentence.
+# This program counts the number of words in a given file 
+# and prints a nice summary
 words = []
 counted_words = []
 
@@ -8,8 +9,8 @@ def count_words(string):
     for word in string.split():
         words.append(word)
 
-    print("\nThe given string has {} words.\n".format(len(words)))
-    print("STRINGS".center(15), "OCCURENCES")
+    print("\nThe given file has {} words.\n".format(len(words)))
+    print("STRING".center(15), "OCCURENCE")
     for each_word in words:
         if each_word not in counted_words:
             print(each_word.center(15), words.count(each_word))
@@ -28,6 +29,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print("\nWith this program, you can count number of words and occurences\n"
-          "of each word in user specified file.\n")
+    print("\nSee each word's occurence in a file in a beautiful format.\n"
+          "Note:  Currently it handles complex data poorly.\n")
     main()
